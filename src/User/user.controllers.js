@@ -42,7 +42,6 @@ exports.updateUserById = async (req, res) => {
 
 exports.deleteUser = async (req, res) => {
   try {
-    // const user = await User.findByIdAndDelete(req.user._id);
     await req.user.remove();
     res.status(200).send(user);
   } catch (error) {
